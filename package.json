@@ -8,10 +8,11 @@
     "npm": "1.2.x"
   },
   "dependencies": {
-    "restify": "^2.8.3",
     "config-multipaas": "0.1.0",
+    "express": "^4.13.0",
     "pg": "^3.6.0",
-    "pg-query": "^0.10.0"
+    "pg-query": "^0.10.0",
+    "restify": "^2.8.3"
   },
   "devDependencies": {
     "tap": "^0.4.13"
