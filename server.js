@@ -1,5 +1,29 @@
 var express = require('express');
 var app = express();
+var fs = require('fs');
+var path = require('path');
+
+//Variable
+var filePath = path.join(__dirname, 'index.html');
+var indexfile="";
+
+//Read and write file using fs
+fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
+    if (!err){
+        indexfile= data;
+        //console.log(indexfile);
+
+    }else{
+        console.log(err);
+    }
+
+    fs.writeFile('helloworld.txt',indexfile , function (err) {
+        if (err) return console.log(err);
+    });
+});
+
+
+
 
 // This responds with "Hello World" on the homepage
 app.get('/', function (req, res) {
